@@ -1,0 +1,10 @@
+#!/bin/bash
+mkdir ./rttov12
+wget http://nwpsaf.eu/downloads/james/rttov123.tar.xz
+tar -xJf rttov123.tar.xz --directory rttov12
+
+echo
+echo "Please download and place desired coefficient files within"
+echo "the appropriate pred folders in ./rttov12/rtcoef_rttov12"
+echo "before continuing on to building the docker image."
+echo

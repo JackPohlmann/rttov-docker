@@ -10,4 +10,4 @@ mv "Makefile.local.ok" "./${RTTOV_INSTALL_DIR}/build/Makefile.local"
 mv "./${RTTOV_INSTALL_DIR}" "/usr/local/${RTTOV_INSTALL_DIR}"
 cd "/usr/local/${RTTOV_INSTALL_DIR}/src"
 ../build/Makefile.PL RTTOV_HDF=1 RTTOV_F2PY=1
-make
+make ARCH=gfortran
