@@ -1,0 +1,13 @@
+#!/bin/bash
+# The dir should only exist if RTTOV is already installed
+if [ ! -d "${RTTOV_INSTALL_DIR}" ]; then
+	mkdir "./${RTTOV_INSTALL_DIR}"
+	if [ ! -f "${RTTOV_MINOR_REL}.tar.xz" ]; then wget --timeout=90 "${RTTOV_SRC_URL}/${RTTOV_MINOR_REL}.tar.xz"; fi
+	tar -xJf "${RTTOV_MINOR_REL}.tar.xz" --directory "./${RTTOV_INSTALL_DIR}"
+fi
+rm "./${RTTOV_INSTALL_DIR}/build/Makefile.local"
+mv "Makefile.local.ok" "./${RTTOV_INSTALL_DIR}/build/Makefile.local"
+mv "./${RTTOV_INSTALL_DIR}" "/usr/local/${RTTOV_INSTALL_DIR}"
+cd "/usr/local/${RTTOV_INSTALL_DIR}/src"
+../build/Makefile.PL RTTOV_HDF=1 RTTOV_F2PY=1
+make
