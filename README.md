@@ -16,7 +16,7 @@ $ usermod -a -G docker <user>
 
 1. Navigate to the directory and run the `setup_rttov` script to download RTTOV12 before building.
 
-  - Alternatively, download RTTOV from the [NWP SAF website]{https://www.nwpsaf.eu/site/software/rttov/} and manually unzip the file into a subdirectory. The default `RTTOV_INSTALL_DIR` variable is `rttov12`, however this can be changed within the Dockerfile to match whatever the desired subdirectory is.
+  - Alternatively, download RTTOV from the [NWP SAF website](https://www.nwpsaf.eu/site/software/rttov/) and manually unzip the file into a subdirectory. The default `RTTOV_INSTALL_DIR` variable is `rttov12`, however this can be changed within the Dockerfile to match whatever the desired subdirectory is.
 
 2. Download any necessary RTTOV coefficients from the NWP SAF website and save them in the necessary locations as outlined in the RTTOV user guide.
 
