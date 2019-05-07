@@ -8,7 +8,9 @@ Note that all the instructions assume that the user is a member of the docker gr
 If not, any command beginning with docker must be prepended with the `sudo` command.
 It is recommended that any primary docker user is added to the docker goup with:
 
-> $ usermod -a -G docker <user>
+```
+$ usermod -a -G docker <user>
+```
 
 ### Recommended:
 
@@ -29,9 +31,11 @@ This will skip adding any supplemental RTTOV coefficient files.
 
 Once built, the image can be tested with:
 
-> $ docker run --rm -it rttov bash
-> root@<docker-id>: cd /usr/local/rttov12/rttov_test
-> root@<docker-id>: ./test_rttov12.sh ARCH=gfortran
+```
+$ docker run --rm -it rttov bash
+root@<docker-id>: cd /usr/local/rttov12/rttov_test
+root@<docker-id>: ./test_rttov12.sh ARCH=gfortran
+```
 
 and the image can be exited by simply typing `exit`.
 
