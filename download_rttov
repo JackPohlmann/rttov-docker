@@ -1,0 +1,4 @@
+#!/bin/bash
+mkdir ./rttov12
+wget --timeout=90 http://nwpsaf.eu/downloads/james/rttov123.tar.xz
+tar -xJf rttov123.tar.xz --directory rttov12

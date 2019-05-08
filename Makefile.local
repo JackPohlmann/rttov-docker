@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
 # This is a reproduction of the default Makefile.local included with RTTOV.
-# It is used when constructing the RTTOV Docker image.
+# It is used when constructing the RTTOV Docker image against HDF5.
 # ------------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------
