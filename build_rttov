@@ -10,4 +10,5 @@ cd "/usr/local/${RTTOV_INSTALL_DIR}/src"
 make ARCH=gfortran
 for PYEXT in 2.7 3.7; do
 	ln -s "/usr/local/${RTTOV_INSTALL_DIR}/wrapper/pyrttov" "/usr/local/lib/python${PYEXT}"
+	ln -s "/usr/local/${RTTOV_INSTALL_DIR}/wrapper/rttov_wrapper_f2py.so" "/usr/local/lib/python${PYEXT}"
 done
